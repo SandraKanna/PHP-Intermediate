@@ -1,0 +1,17 @@
+# .gitignore
+# Docker
+pg-data/
+uploads-data/
+logs-data/
+vendor/
+node_modules/
+.env
+config/php-upload.ini
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
