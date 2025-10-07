@@ -113,7 +113,7 @@ psql -U app -d appdb
 \dt                       -- list all tables (you should see "form1")
 SELECT * FROM form1;      -- view all submitted form entries
 
-#to exit posgres:
+#to exit postgres:
 \q
 ```
 ---

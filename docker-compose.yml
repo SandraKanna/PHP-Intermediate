@@ -8,13 +8,11 @@ services:
     env_file:
       - .env
     volumes:
-     # ro -> read only for safety
       - ./src:/var/www/html
       # Config PHP, read only
       - ./config/php-upload.ini:/usr/local/etc/php/conf.d/zzz-upload.ini:ro
       # mount separate volumes for writing data
       - uploads-data:/var/www/html/uploads
-      - logs-data:/var/log/apache2
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/"]
@@ -38,5 +36,4 @@ services:
 
 volumes:
   uploads-data:
-  logs-data:
   pg-data:
