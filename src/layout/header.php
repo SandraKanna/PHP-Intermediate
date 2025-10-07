@@ -12,19 +12,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PHP Fundamentals</title>
-  <style>
-    body{font-family:system-ui,Arial,Helvetica,sans-serif;margin:20px}
-    nav a{margin-right:10px;text-decoration:none}
-    nav a.active{font-weight:bold;text-decoration:underline}
-    .muted{color:#666}
-    code{background:#f6f6f6;padding:2px 4px;border-radius:3px}
-    hr{margin:20px 0}
-  </style>
+  <title>PHP Training</title>
+  <link rel="stylesheet" href="/assets/style.css?v=1"> <!-- with cache-busting when changing styles -->
 </head>
 <body>
+  <div class="container">
   <header>
-    <h1>PHP Fundamentals</h1>
+    <h1>PHP Training</h1>
     <p class="muted">PHP version: <?= phpversion(); ?></p>
     <nav>
       <?php foreach ($pages as $slug => $meta): ?>

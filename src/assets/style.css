@@ -1,0 +1,94 @@
+/* Base */
+:root{
+  --bg:#ffffff;
+  --fg:#111;
+  --muted:#666;
+  --accent:#2563eb;
+  --accent-2:#1d4ed8;
+  --border:#e5e7eb;
+  --soft:#f7f7f8;
+  --code:#0f172a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0f14; --fg:#e5e7eb; --muted:#9aa3af;
+    --accent:#60a5fa; --accent-2:#3b82f6; --border:#1f2937; --soft:#0f141b; --code:#e2e8f0;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; padding:24px;
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg); color:var(--fg);
+}
+
+/* Layout */
+.container{max-width:960px;margin:0 auto}
+header,footer{margin:12px 0}
+hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+
+/* Typography */
+h1,h2,h3{margin:0 0 8px}
+.muted{color:var(--muted)}
+code,.code,pre{
+  font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+pre{
+  background:var(--soft); border:1px solid var(--border);
+  padding:12px; border-radius:8px; overflow:auto;
+}
+
+/* Nav */
+nav{
+  display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 0;
+}
+nav a{
+  text-decoration:none; color:var(--accent);
+  padding:6px 10px; border-radius:6px; border:1px solid transparent;
+}
+nav a:hover{background:var(--soft)}
+nav a.active{
+  font-weight:600; text-decoration:none; border-color:var(--accent);
+}
+
+/* Panels / cards */
+.panel{
+  background:var(--soft); border:1px solid var(--border);
+  padding:16px; border-radius:10px; margin:16px 0;
+}
+.success{border-color:#10b981}
+.error{border-color:#ef4444}
+
+/* Lists */
+ul.demo{margin:8px 0 16px; padding-left:18px}
+ul.demo li{margin:2px 0}
+
+/* Buttons */
+button,.btn{
+  appearance:none; border:none; cursor:pointer;
+  background:var(--accent); color:#fff; padding:10px 14px;
+  border-radius:8px; font-weight:600;
+}
+button:hover,.btn:hover{background:var(--accent-2)}
+
+/* Forms */
+form{
+  display:grid; gap:14px; max-width:680px;
+  background:var(--soft); border:1px solid var(--border);
+  padding:18px; border-radius:12px;
+}
+label{display:block; font-weight:600; margin-bottom:4px}
+input[type="text"],input[type="email"],input[type="number"],select,textarea{
+  width:100%; padding:10px; border:1px solid var(--border);
+  border-radius:8px; background:transparent; color:inherit;
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent); outline-offset:1px}
+
+/* Tables */
+table{border-collapse:collapse; width:100%}
+th,td{border:1px solid var(--border); padding:8px}
+th{background:var(--soft); text-align:left}
+
+/* Footer */
+footer p{margin:4px 0}
