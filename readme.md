@@ -94,6 +94,30 @@ make clean
 make destroy
 ```
 
-### 4. Open in browser
+## 4. Database
+Data is now stored in PostgreSQL (instead of SQLite).
+The database container is defined in docker-compose.yml, and connection credentials are loaded automatically from the environment variables (DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_PORT).
+
+You can inspect the data directly from the Postgres container:
+
+```bash
+# Open a shell inside the Postgres container
+docker compose exec db bash
+
+# Connect to the database
+psql -U app -d appdb
+
+# Once inside the psql prompt:
+\dt                       -- list all tables (you should see "form1")
+SELECT * FROM form1;      -- view all submitted form entries
+
+#to exit posgres:
+\q
+```
+---
+
+## 5. Open in browser
+```
 http://localhost:8080
 
+```

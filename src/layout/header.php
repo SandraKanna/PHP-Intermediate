@@ -20,13 +20,25 @@
   <header>
     <h1>PHP Training</h1>
     <p class="muted">PHP version: <?= phpversion(); ?></p>
-    <nav>
-      <?php foreach ($pages as $slug => $meta): ?>
-        <?php $isActive = ($slug === $current); ?>
-        <a href="?p=<?= urlencode($slug) ?>" class="<?= $isActive ? 'active' : '' ?>">
-          <?= htmlspecialchars($meta['title']) ?>
-        </a>
-      <?php endforeach; ?>
+  <nav class="navbar">
+      <a href="?p=home" class="<?= $current === 'home' ? 'active' : '' ?>">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn <?= ($pages[$current]['group'] ?? '') === 'fundamentals' ? 'active' : '' ?>">
+          Fundamentals ▾
+        </button>
+        <div class="dropdown-content">
+          <?php foreach ($pages as $slug => $meta): ?>
+            <?php if (($meta['group'] ?? '') === 'fundamentals'): ?>
+              <a href="?p=<?= urlencode($slug) ?>" class="<?= $slug === $current ? 'active' : '' ?>">
+                <?= htmlspecialchars($meta['title']) ?>
+              </a>
+            <?php endif; ?>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <a href="?p=06-form" class="<?= ($pages[$current]['group'] ?? '') === 'forms' ? 'active' : '' ?>">Form</a>
     </nav>
     <hr>
   </header>

@@ -2,13 +2,14 @@
 
 section('Welcome', 2);
 ?>
-<p>This site splits the “PHP Fundamentals” practice into separate pages:
-Echo vs Print, Variables & Scope, Constants, Strings & Numbers, Arrays & Loops.</p>
+<p>This project is the next level after <b>PHP Fundamentals</b> and <b>PHP Forms</b>.  
+It combines everything learned so far into a single, modular application — with routing, database persistence, and a cleaner interface.
+It includes:</p>
 
 <ul>
-  <li><a href="?p=01-output">1) Echo vs Print</a></li>
-  <li><a href="?p=02-vars">2) Variables & Scope</a></li>
-  <li><a href="?p=03-const">3) Constants</a></li>
-  <li><a href="?p=04-strings">4) Strings & Numbers</a></li>
-  <li><a href="?p=05-arrays">5) Arrays & Loops</a></li>
+  <li>A simple <b>router</b> (`index.php`) that loads pages dynamically.</li>
+  <li>A clean <b>layout system</b> (header + footer).</li>
+  <li>A <b>multi-field form</b> that stores data into PostgreSQL.</li>
+  <li>A shared <b>CSS stylesheet</b> for consistent design.</li>
+  <li>PHP version pinned at <b>7.4</b> for future Laravel compatibility.</li>
 </ul>

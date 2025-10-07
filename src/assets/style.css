@@ -52,6 +52,79 @@ nav a.active{
   font-weight:600; text-decoration:none; border-color:var(--accent);
 }
 
+/* Navbar with dropdown */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* Unified style for buttons and links */
+.navbar a,
+.navbar .dropbtn {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.navbar a:hover,
+.navbar .dropbtn:hover {
+  background: var(--border);
+  color: var(--accent-2);
+}
+
+.navbar .active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  color: var(--fg);
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--border);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* Panels / cards */
 .panel{
   background:var(--soft); border:1px solid var(--border);
