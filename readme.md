@@ -76,6 +76,8 @@ DB_PASS=secret
 ```
 ---
 ## 3. Usage
+Make sure you have **Docker** and **Docker Compose** installed.  
+Then use the provided `Makefile`:
 
 ```bash
 # build images (if they dont exist yet) and start the containers
