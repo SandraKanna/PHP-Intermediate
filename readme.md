@@ -61,7 +61,7 @@ php-intermediate/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/php-intermediate.git
+git clone https://git@github.com:SandraKanna/php-intermediate.git
 cd php-intermediate
 ```
 ---
