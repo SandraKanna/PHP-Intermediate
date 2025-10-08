@@ -66,7 +66,7 @@ cd php-intermediate
 ```
 ---
 ### 2. Configure environment
-Edit config/.env if needed:
+Edit .env if needed:
 ```bash
 DB_HOST=db
 DB_PORT=5432
