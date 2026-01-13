@@ -1,6 +1,6 @@
 # PHP Intermediate — Practice Application
 
-This project is the **next level** after *PHP Fundamentals* and *PHP Forms*.  
+This project is the **next level** after *[PHP Fundamentals]([url](https://github.com/SandraKanna/PHP-intro))* and *[PHP Forms*]([url](https://github.com/SandraKanna/PHP-form)).  
 It combines everything learned so far into a single, modular application — with routing, database persistence, and a cleaner interface.
 
 ---
